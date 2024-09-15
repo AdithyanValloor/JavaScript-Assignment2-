@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript2</title>
+    <title>Enter a String!!!</title>
 </head>
 <body>
+    <style>
+        body{
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        label{
+            display: block;
+            margin-top: 50px;
+            margin-bottom: 10px;
+        }
+        input{
+            border-radius: 20px;
+            border-style: none;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            height: 30px;
+            width: 200px;
+            padding-left: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+        }
+        input:focus{
+            border-style: none;
+            outline: none;
+            box-shadow: rgba(0, 176, 15, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+        }
+
+        button{
+            color: white;
+            background-color: rgb(0, 171, 114);
+            border-radius: 20px;
+            border-style: none;
+            height: 30px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            width: 80px;
+            transition:all 0.5s;
+            cursor: pointer;
+            margin: 10px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        button:hover{
+            background-color: rgb(0, 85, 57);
+        }
+        #result{
+            display: none;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+    </style>
+    <div>
+        <label for="userInput">Enter a String</label>
+        <input type="text" id="userInput" name="userInput" placeholder="Enter a String">
+        <button onclick="UserInput()">Submit</button>
+        <p id="result"></p>
+    </div>
     
 
     <script src="script.js"></script>

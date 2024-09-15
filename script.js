@@ -13,7 +13,35 @@ const strIndex = (str) => {
     
 }
 
-let userString = prompt('Enter a string')
+const UserInput = ( ) => {
 
-document.write(strIndex(userString))
+    let userString = document.getElementById('userInput').value;
+
+    var str = /^[a-zA-Z]+$/;
+
+    var resultDisplay = document.getElementById('result')
+    
+    resultDisplay.style.display = 'block'
+    
+    if(!userString){
+
+        resultDisplay.textContent = 'Please enter a value!!'
+        console.log('please enter a value');  
+
+    }else if(!userString.match(str)){
+        
+        resultDisplay.textContent = 'Please enter a string!!'
+        console.log('please enter a string'); 
+        
+    }
+    
+    
+    else{
+
+        resultDisplay.textContent = `${strIndex(userString)}`
+        console.log(`${strIndex(userString)}`);  
+
+    }
+
+}
 
